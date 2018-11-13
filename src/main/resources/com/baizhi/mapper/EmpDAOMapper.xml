@@ -6,6 +6,16 @@
         select id,name,salary,age,birthday,d_id from employees
     </select>
 
-    <insert id="insert"></insert>
+    <insert id="insert">
+        insert into employees values(#{id},#{name},#{salary},#{age},#{birthday},#{d_id})
+    </insert>
+
+    <delete id="delete">
+        delete from employees where id=#{id}
+    </delete>
+
+    <update id="update">
+        update employees set name=#{name},salary=#{salary},age=#{age},#{birthday},#{d_id} where id=#{id}
+    </update>
 
 </mapper>
