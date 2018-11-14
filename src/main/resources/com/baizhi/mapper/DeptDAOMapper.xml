@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baizhi.dao.DeptDAO">
+
+    <select id="queryAll" resultType="Dept">
+        select * from dept
+    </select>
+
+    <insert id="insert">
+        insert into dept values(#{id},#{no},#{name},#{numbers},#{createDate})
+    </insert>
+
+    <delete id="delete">
+        delete from dept where id=#{id}
+    </delete>
+
+    <update id="update">s
+        update dept set no=#{no},name=#{name},numbers=#{numbers},createDat=#{createDate} where id=#{id}
+    </update>
+
+</mapper>
